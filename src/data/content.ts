@@ -1,18 +1,18 @@
 export const profile = {
-  name: 'Alex Morgan',
-  initials: 'AM',
-  role: 'Staff Software Engineer',
-  company: 'Northwind Labs',
+  name: 'Buddhadeb Chhetri',
+  initials: 'BC',
+  role: 'Computer Assistent',
+  company: 'Kolkata Teachers Training College',
   companyUrl: '#',
   tagline:
-    'I build developer tools, AI infrastructure, and open-source software that helps teams ship faster and more reliably.',
-  bio: `I'm a Staff Software Engineer at Northwind Labs, where I lead the developer platform team. I focus on build systems, AI-assisted tooling, and the infrastructure that lets small teams punch above their weight. Before Northwind, I co-founded two startups and spent time at large-scale infrastructure companies.`,
-  email: 'hello@alexmorgan.dev',
-  location: 'San Francisco, CA',
+    'I am game developer and website developer.',
+  bio: `I'm a Computer Assistent at Kolkata Teachers Training College, where I focus on game development and website development.`,
+  email: 'buddhadebchhetri6@gmail.com',
+  location: 'Kolkata, West Bengal',
   social: [
-    { label: 'GitHub', url: 'https://github.com' },
-    { label: 'LinkedIn', url: 'https://linkedin.com' },
-    { label: 'X', url: 'https://x.com' },
+    { label: 'GitHub', url: 'https://github.com/buddhadebchhetri' },
+    { label: 'LinkedIn', url: 'https://linkedin.com/in/buddhadebchhetri' },
+    { label: 'X', url: 'https://x.com/buddhadebchhetri' },
   ],
 };
 
