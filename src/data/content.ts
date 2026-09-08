@@ -5,8 +5,8 @@ export const profile = {
   company: 'Kolkata Teachers Training College',
   companyUrl: '#',
   tagline:
-    'I am game developer and website developer.',
-  bio: `I'm a Computer Assistent at Kolkata Teachers Training College, where I focus on game development and website development.`,
+    'A Developer. A Creator. Always Building.',
+  bio: `I’m an independent developer passionate about game development, interactive experiences, and technology. I work with Unity and Unreal Engine to create 2D and 3D games, while also exploring web development, backend systems, and new technologies. I enjoy turning ideas into functional, engaging products and continuously learning along the way.`,
   email: 'buddhadebchhetri6@gmail.com',
   location: 'Kolkata, West Bengal',
   social: [
