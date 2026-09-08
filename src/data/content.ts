@@ -10,9 +10,12 @@ export const profile = {
   email: 'buddhadebchhetri6@gmail.com',
   location: 'Kolkata, West Bengal',
   social: [
-    { label: 'GitHub', url: 'https://github.com/buddhadebchhetri' },
+    { label: 'GitHub', url: 'https://github.com/buddhad' },
     { label: 'LinkedIn', url: 'https://linkedin.com/in/buddhadebchhetri' },
-    { label: 'X', url: 'https://x.com/buddhadebchhetri' },
+    { label: 'X', url: 'https://x.com/buddhadeb01' },
+    { label: 'YouTube', url: 'https://youtube.com/@buddhadebchhetri' },
+    { label: 'Instagram', url: 'https://instagram.com/buddhadebchhetri' },
+    { label: 'Facebook', url: 'https://facebook.com/buddhadebchhetri' },
   ],
 };
 
