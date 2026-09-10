@@ -1,4 +1,4 @@
-import { useHashRoute, type Route } from '@/lib/router';
+import { useRoute, type Route } from '@/lib/router';
 import { useTheme } from '@/lib/theme';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
@@ -9,7 +9,7 @@ import { BlogPage } from '@/pages/BlogPage';
 import { ContactPage } from '@/pages/ContactPage';
 
 function App() {
-  const [route, navigate] = useHashRoute();
+  const [route, navigate] = useRoute();
   const { dark, toggle } = useTheme();
 
   const renderPage = () => {
