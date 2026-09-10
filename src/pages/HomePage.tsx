@@ -43,7 +43,7 @@ export function HomePage({ onNavigate }: Props) {
             Latest writing
           </h2>
           <button
-            onClick={() => onNavigate('writing')}
+            onClick={() => onNavigate('projects')}
             className="link-underline text-sm text-ink-500 hover:text-ink-800 dark:text-ink-400 dark:hover:text-ink-100"
           >
             View Projects

@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 
-export type Route = 'home' | 'about' | 'writing' | 'contact';
+export type Route = 'home' | 'about' | 'projects' | 'writing' | 'contact';
 
 const routeMap: Record<string, Route> = {
   '': 'home',
   '#': 'home',
   '#/': 'home',
   '#about': 'about',
+  '#projects': 'projects',
   '#writing': 'writing',
   '#contact': 'contact',
 };

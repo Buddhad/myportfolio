@@ -199,3 +199,27 @@ export const history = [
     text: 'Joined Northwind Labs after the acquisition. Back to building developer tools at scale, which is where I am happiest.',
   },
 ];
+
+export const projects = [
+  {
+    title: 'Neon Odyssey',
+    description: 'A fast-paced 3D platformer set in a cyberpunk universe. Built with Unity, featuring custom shaders and fluid movement mechanics.',
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80',
+    link: '#',
+    tags: ['Unity', 'C#', '3D Platformer', 'HLSL']
+  },
+  {
+    title: 'Echoes of the Past',
+    description: 'An atmospheric 2D puzzle adventure game with rich narrative storytelling and hand-drawn environments.',
+    image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80',
+    link: '#',
+    tags: ['Unreal Engine', 'Blueprints', '2D', 'Puzzle']
+  },
+  {
+    title: 'Multiplayer Arena',
+    description: 'A competitive top-down shooter prototyping networking models, predictive movement, and server-authoritative logic.',
+    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80',
+    link: '#',
+    tags: ['Unity', 'C#', 'Networking', 'Mirror']
+  }
+];

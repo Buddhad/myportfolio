@@ -13,6 +13,7 @@ interface Props {
 
 const navItems: { label: string; route: Route }[] = [
   { label: 'About', route: 'about' },
+  { label: 'Projects', route: 'projects' },
   { label: 'Writing', route: 'writing' },
   { label: 'Contact', route: 'contact' },
 ];
