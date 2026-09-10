@@ -80,9 +80,10 @@ export function AboutPage({ onNavigate }: Props) {
                 )}
               </div>
               {item.description && (
-                <p className="mt-3 max-w-prose text-base leading-relaxed text-ink-600 dark:text-ink-300">
-                  {item.description}
-                </p>
+                <p 
+                  className="mt-3 max-w-prose text-base leading-relaxed text-ink-600 dark:text-ink-300 [&_strong]:font-semibold [&_strong]:text-orange-500 dark:[&_strong]:text-orange-400"
+                  dangerouslySetInnerHTML={{ __html: item.description }}
+                />
               )}
             </div>
           ))}

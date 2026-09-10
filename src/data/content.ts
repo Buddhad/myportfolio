@@ -180,14 +180,14 @@ export const education = [
     school: 'Kingston Educational Institute',
     year: '2019 – 2022',
     url: 'https://in.linkedin.com/in/buddhadebchhetri',
-    description: 'Passed with First Division honors. Heavily focused on core programming principles and software engineering paradigms. Built practical competencies in C, Java, and Data Structures. Frequently took part in the institution\'s annual college hackathons and competitive coding challenges. Attended external development bootcamps and intensive technical workshops dealing with Web Development and Cloud Computing infrastructure.',
+    description: 'Passed with <strong>First Division honors</strong>. Heavily focused on <strong>core programming principles</strong> and <strong>software engineering paradigms</strong>. Built practical competencies in <strong>C, Java, and Data Structures</strong>. Frequently took part in the institution\'s annual <strong>college hackathons</strong> and competitive coding challenges. Attended external development bootcamps and intensive technical workshops dealing with <strong>Web Development</strong> and <strong>Cloud Computing infrastructure</strong>.',
   },
   {
     degree: 'Secondary School Certification',
     school: 'Secondary Education (WBBSE)',
     year: '',
     url: '',
-    description: 'Developed a robust initial baseline in advanced Mathematics and pure Sciences. Enthusiastically represented his school in science exhibition modeling circuits and participated in inter-school sports tournaments.',
+    description: 'Developed a robust initial baseline in <strong>advanced Mathematics</strong> and <strong>pure Sciences</strong>. Enthusiastically represented his school in <strong>science exhibition</strong> modeling circuits and participated in inter-school sports tournaments.',
   },
 ];
 
