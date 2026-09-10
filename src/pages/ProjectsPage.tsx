@@ -18,7 +18,7 @@ export function ProjectsPage() {
         {projects.map((project, i) => (
           <div key={i} className="group relative flex flex-col items-start justify-between rounded-2xl border border-ink-200/60 bg-ink-50 p-4 transition-colors hover:bg-ink-100/50 dark:border-ink-800/60 dark:bg-ink-950/50 dark:hover:bg-ink-900/50 stagger">
             <div className="w-full aspect-video overflow-hidden rounded-xl bg-ink-200 dark:bg-ink-800">
-              <img src={project.image} alt={project.title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+              <img src={project.image} alt={project.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
             </div>
             <div className="mt-6 flex flex-col gap-2">
               <h3 className="font-serif text-xl font-medium text-ink-900 dark:text-ink-50">
