@@ -1,26 +1,20 @@
 import { useEffect, useState } from 'react';
 
-export type Route = 'home' | 'about' | 'projects' | 'writing' | 'contact';
+const ROUTES = ['home', 'about', 'projects', 'blogs', 'contact'] as const;
+export type Route = typeof ROUTES[number];
 
-const routeMap: Record<string, Route> = {
-  '': 'home',
-  '#': 'home',
-  '#/': 'home',
-  '#about': 'about',
-  '#projects': 'projects',
-  '#writing': 'writing',
-  '#contact': 'contact',
+const getRouteFromHash = (): Route => {
+  if (typeof window === 'undefined') return 'home';
+  const hash = window.location.hash.replace(/^#\/?/, '');
+  return ROUTES.includes(hash as Route) ? (hash as Route) : 'home';
 };
 
 export function useHashRoute(): [Route, (r: Route) => void] {
-  const [route, setRoute] = useState<Route>(() => {
-    if (typeof window === 'undefined') return 'home';
-    return routeMap[window.location.hash] ?? 'home';
-  });
+  const [route, setRoute] = useState<Route>(getRouteFromHash);
 
   useEffect(() => {
     const onHashChange = () => {
-      setRoute(routeMap[window.location.hash] ?? 'home');
+      setRoute(getRouteFromHash());
       window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
     };
     window.addEventListener('hashchange', onHashChange);
@@ -28,8 +22,7 @@ export function useHashRoute(): [Route, (r: Route) => void] {
   }, []);
 
   const navigate = (r: Route) => {
-    const hash = r === 'home' ? '#/' : `#${r}`;
-    window.location.hash = hash;
+    window.location.hash = r === 'home' ? '#/' : `#${r}`;
   };
 
   return [route, navigate];

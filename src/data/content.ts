@@ -49,34 +49,64 @@ export const latestWriting = [
 
 export const essays = [
   {
-    date: '2026-08-14',
-    title: 'Why your build cache is probably lying to you',
+    date: '2022-07-18',
+    title: 'Free Resoures for Game Developers',
     excerpt:
-      'Most remote cache implementations have a subtle correctness bug around content-addressed keys. Here is how to find it and fix it.',
+      'Level up your game design journey with a rich collection of free C# scripts, game assets, and programming tools curated specifically for beginner developers.',
   },
   {
-    date: '2026-06-02',
-    title: 'Notes on shipping 1,000+ PRs with AI coding tools',
+    date: '2022-07-15',
+    title: '17+ Great Websites for web Developers',
     excerpt:
-      'Lessons from a year of parallel AI-assisted development: planning workflows, verification loops, and where humans still matter most.',
+      'Explore over seventeen incredibly useful online platforms and web tools that provide design inspiration, coding challenges, and daily productivity boosts for front-end engineers.',
   },
   {
-    date: '2026-03-20',
-    title: 'The hidden cost of microservices no one talks about',
+    date: '2022-01-28',
+    title: '10 Incredibly Useful Extensions For Developers',
     excerpt:
-      'Latency budgets, ownership boundaries, and the organizational tax that does not show up in any architecture diagram.',
+      'Supercharge your daily programming workflow with ten essential browser and IDE extensions tailored to help code newbies and web developers save hours of work.',
   },
   {
-    date: '2025-11-08',
-    title: 'How we cut our CI pipeline from 40 minutes to 6',
+    date: '2022-01-23',
+    title: 'JavaScript ES6',
     excerpt:
-      'A practical playbook for finding the slowest parts of your CI: sharding, remote execution, and ruthless trimming.',
+      'A beginner-friendly breakdown of modern JavaScript ES6 features, exploring arrow functions, template literals, destructuring, and syntax upgrades that clean up your codebase.',
   },
   {
-    date: '2025-07-15',
-    title: 'Designing APIs that developers actually enjoy',
+    date: '2021-08-19',
+    title: 'Enhance your skills in Html Css and Js ?',
     excerpt:
-      'Ergonomics, error messages, and the small details that separate a tool people tolerate from one they love.',
+      'Take on interactive coding challenges designed to sharpen your core foundational skills in HTML, CSS, and vanilla JavaScript through practical, hands-on building.',
+  },
+  {
+    date: '2021-08-07',
+    title: 'API Calls',
+    excerpt:
+      'A simplified overview of how to fetch, handle, and display external data in frontend projects using basic JavaScript, ideal for web development beginners.',
+  },
+  {
+    date: '2021-08-02',
+    title: 'React CheatSheets',
+    excerpt:
+      'A quick-reference guide and cheat sheet covering vital React and React Native concepts, hooks, and component layouts to speed up your front-end development.',
+  },
+  {
+    date: '2021-07-31',
+    title: 'Functions in javascript',
+    excerpt:
+      'Demystifying functions in JavaScript by breaking down declarations, expressions, and scoping rules into easy-to-understand snippets for new coders.',
+  },
+  {
+    date: '2021-07-29',
+    title: 'Git Cheat Sheet',
+    excerpt:
+      'Master version control with this practical cheat sheet listing the most critical Git commands for staging, committing, branching, and pushing to GitHub.',
+  },
+  {
+    date: '2021-05-06',
+    title: 'Important Tools For WebDeveloper',
+    excerpt:
+      'An introductory roadmap introducing the essential software, frameworks, and text editors that every front-end developer needs to set up a robust workspace.',
   },
 ];
 
@@ -175,28 +205,16 @@ export const skills = [
 
 export const history = [
   {
-    year: '1995',
-    text: 'My parents brought home a Packard Bell running Windows 95. I spent more time in MS Paint than was healthy.',
+    year: '2021',
+    text: 'Initially built a public footprint through open source. I joined the DEV Community, publishing articles on web development, JavaScript, React, and Git. Successfully completed Hacktoberfest and hosted repositories to help others practice their first pull requests.',
   },
   {
-    year: '1999',
-    text: 'Built my first website on GeoCities — a fan page for a video game that did not exist. Learned HTML from a library book.',
+    year: '2022',
+    text: 'Expanded into Game Dev, Mobile, and Design. I transitioned from web projects like custom clocks and logic puzzles to game development with Unity, publishing guides on free 3D assets. I also released my first mobile application built with Flutter.',
   },
   {
-    year: '2007',
-    text: 'Started college. Switched from electrical engineering to computer science after realizing I preferred compilers to circuits.',
-  },
-  {
-    year: '2013',
-    text: 'Graduated, moved to the Bay Area, and joined a small infrastructure startup. Discovered that build systems are surprisingly fun.',
-  },
-  {
-    year: '2018',
-    text: 'Co-founded my first company. Learned that building the product is the easy part; everything else is the hard part.',
-  },
-  {
-    year: '2023',
-    text: 'Joined Northwind Labs after the acquisition. Back to building developer tools at scale, which is where I am happiest.',
+    year: '2023 – 2026',
+    text: 'Focused on community building and extended my tech stack. I contributed to organizations like FOSSASIA, EddieHub, and WebXDAO while exploring blockchain development, decentralized systems, and scalable backend integrations with PostgreSQL and Google Cloud.',
   },
 ];
 

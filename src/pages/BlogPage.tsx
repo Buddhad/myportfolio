@@ -8,19 +8,19 @@ function formatDate(iso: string) {
   });
 }
 
-export function WritingPage() {
+export function BlogPage() {
   return (
     <div className="container-wide pt-32 pb-12">
       <section className="animate-fade-up">
         <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink-900 dark:text-ink-50 sm:text-4xl">
-          Writing
+          Blogs
         </h1>
       </section>
 
       {/* Essays */}
       <section className="mt-12">
         <h2 className="font-serif text-lg font-medium text-ink-700 dark:text-ink-200">
-          Essays on this site
+          Latest Blogs
         </h2>
         <div className="mt-6 divide-y divide-ink-200/60 dark:divide-ink-800/60">
           {essays.map((post) => (
@@ -46,7 +46,7 @@ export function WritingPage() {
       {/* Selected writing elsewhere */}
       <section className="mt-16">
         <h2 className="font-serif text-lg font-medium text-ink-700 dark:text-ink-200">
-          Selected writing elsewhere
+          Selected Blogs
         </h2>
         <div className="mt-6 divide-y divide-ink-200/60 dark:divide-ink-800/60">
           {selectedWriting.map((post) => (

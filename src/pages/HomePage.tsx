@@ -36,14 +36,14 @@ export function HomePage({ onNavigate }: Props) {
         </div>
       </section>
 
-      {/* Latest writing */}
+      {/* Latest Blogs */}
       <section className="mt-20">
         <div className="flex items-baseline justify-between">
           <h2 className="font-serif text-xl font-medium text-ink-800 dark:text-ink-100">
-            Latest writing
+            Latest Blogs
           </h2>
           <button
-            onClick={() => onNavigate('projects')}
+            onClick={() => onNavigate('blogs')}
             className="link-underline text-sm text-ink-500 hover:text-ink-800 dark:text-ink-400 dark:hover:text-ink-100"
           >
             View Projects

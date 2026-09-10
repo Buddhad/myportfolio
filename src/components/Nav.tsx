@@ -14,7 +14,7 @@ interface Props {
 const navItems: { label: string; route: Route }[] = [
   { label: 'About', route: 'about' },
   { label: 'Projects', route: 'projects' },
-  { label: 'Writing', route: 'writing' },
+  { label: 'Blogs', route: 'blogs' },
   { label: 'Contact', route: 'contact' },
 ];
 
@@ -36,11 +36,10 @@ export function Nav({ current, onNavigate, dark, onToggleTheme }: Props) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'border-b border-ink-200/60 bg-ink-50/80 backdrop-blur-md dark:border-ink-800/60 dark:bg-ink-950/80'
-          : 'border-b border-transparent'
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled
+        ? 'border-b border-ink-200/60 bg-ink-50/80 backdrop-blur-md dark:border-ink-800/60 dark:bg-ink-950/80'
+        : 'border-b border-transparent'
+        }`}
     >
       <nav className="container-wide flex h-16 items-center justify-between">
         <button
@@ -55,11 +54,10 @@ export function Nav({ current, onNavigate, dark, onToggleTheme }: Props) {
             <button
               key={item.route}
               onClick={() => go(item.route)}
-              className={`relative rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                current === item.route
-                  ? 'text-ink-900 dark:text-ink-50'
-                  : 'text-ink-500 hover:text-ink-800 dark:text-ink-400 dark:hover:text-ink-100'
-              }`}
+              className={`relative rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${current === item.route
+                ? 'text-ink-900 dark:text-ink-50'
+                : 'text-ink-500 hover:text-ink-800 dark:text-ink-400 dark:hover:text-ink-100'
+                }`}
             >
               {item.label}
               {current === item.route && (
@@ -90,11 +88,10 @@ export function Nav({ current, onNavigate, dark, onToggleTheme }: Props) {
               <button
                 key={item.route}
                 onClick={() => go(item.route)}
-                className={`py-3 text-left text-base font-medium transition-colors ${
-                  current === item.route
-                    ? 'text-ink-900 dark:text-ink-50'
-                    : 'text-ink-500 hover:text-ink-800 dark:text-ink-400 dark:hover:text-ink-100'
-                }`}
+                className={`py-3 text-left text-base font-medium transition-colors ${current === item.route
+                  ? 'text-ink-900 dark:text-ink-50'
+                  : 'text-ink-500 hover:text-ink-800 dark:text-ink-400 dark:hover:text-ink-100'
+                  }`}
               >
                 {item.label}
               </button>
