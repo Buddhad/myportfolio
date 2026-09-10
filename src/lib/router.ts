@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export type Route = 'home' | 'about' | 'writing' | 'resume' | 'contact';
+export type Route = 'home' | 'about' | 'writing' | 'contact';
 
 const routeMap: Record<string, Route> = {
   '': 'home',
@@ -8,7 +8,6 @@ const routeMap: Record<string, Route> = {
   '#/': 'home',
   '#about': 'about',
   '#writing': 'writing',
-  '#resume': 'resume',
   '#contact': 'contact',
 };
 

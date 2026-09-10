@@ -1,12 +1,13 @@
 export const profile = {
   name: 'Buddhadeb Chhetri',
   initials: 'BC',
-  role: 'Computer Assistent',
-  company: 'Kolkata Teachers Training College',
-  companyUrl: '#',
-  tagline:
-    'A Developer. A Creator. Always Building.',
-  bio: `I’m an independent developer passionate about game development, interactive experiences, and technology. I work with Unity and Unreal Engine to create 2D and 3D games, while also exploring web development, backend systems, and new technologies. I enjoy turning ideas into functional, engaging products and continuously learning along the way.`,
+  role: 'Founder',
+  company: 'Surya Interactive',
+  companyUrl: 'https://suryainteractive.in/',
+  tagline: 'A Developer. A Creator. Always Building.',
+  bio: `Hi, I’m Buddhadeb Chhetri, an independent developer and creator passionate about building games, interactive experiences, and digital products.
+
+I work primarily with Unity and Unreal Engine, developing both 2D and 3D games with a focus on gameplay, systems, storytelling, and immersive experiences. I enjoy taking an idea from the early concept stage and turning it into a playable, polished product.`,
   email: 'buddhadebchhetri6@gmail.com',
   location: 'Kolkata, West Bengal',
   social: [
@@ -21,28 +22,28 @@ export const profile = {
 
 export const latestWriting = [
   {
-    date: '2026-08-14',
-    source: 'Northwind Blog',
-    title: 'Why your build cache is probably lying to you',
+    date: '2024-03-12',
+    source: 'Dev.to',
+    title: '6 Must-Have APIs for Web Development ',
     excerpt:
-      'Most remote cache implementations have a subtle correctness bug around content-addressed keys. Here is how to find it and fix it.',
-    url: '#',
+      'Discover the essential Application Programming Interfaces (APIs) every modern web developer needs to supercharge their React and JavaScript applications, streamline data fetching, and enhance user experience.',
+    url: 'https://dev.to/buddhadebchhetri/6-must-have-apis-for-web-development-3233',
   },
   {
-    date: '2026-06-02',
-    source: 'On this site',
-    title: 'Notes on shipping 1,000+ PRs with AI coding tools',
+    date: '2022-09-03',
+    source: 'Dev.to',
+    title: '10 Useful Android Library for Every New Developer ',
     excerpt:
-      'Lessons from a year of parallel AI-assisted development: planning workflows, verification loops, and where humans still matter most.',
-    url: '#writing',
+      'Boost your mobile development productivity with this curated list of ten powerful, open-source Android libraries designed to make coding smoother and faster for beginners.',
+    url: 'https://dev.to/buddhadebchhetri/10-useful-android-library-for-every-new-developer-4e5n',
   },
   {
-    date: '2026-03-20',
-    source: 'On this site',
-    title: 'The hidden cost of microservices no one talks about',
+    date: '2022-03-20',
+    source: 'Dev.to',
+    title: 'Best Free 3D Assets for Gamedevs',
     excerpt:
-      'Latency budgets, ownership boundaries, and the organizational tax that does not show up in any architecture diagram.',
-    url: '#writing',
+      'An essential compilation of top-tier, zero-cost 3D asset platforms to help indie game developers find high-quality models, textures, and environments without breaking the bank.',
+    url: 'https://dev.to/buddhadebchhetri/best-free-3d-assets-for-gamedevs-4d51',
   },
 ];
 
@@ -165,10 +166,11 @@ export const education = [
 ];
 
 export const skills = [
-  { category: 'Languages', items: ['TypeScript', 'Go', 'Rust', 'Python'] },
-  { category: 'Infrastructure', items: ['Kubernetes', 'Terraform', 'Bazel', 'gRPC'] },
-  { category: 'Databases', items: ['PostgreSQL', 'Redis', 'ClickHouse'] },
-  { category: 'AI / ML', items: ['PyTorch', 'LLM tooling', 'Evals', 'RAG pipelines'] },
+  { category: 'Languages', items: ['C#', 'C++', 'Kotlin', 'Python', 'TypeScript'] },
+  { category: 'Infrastructure', items: ['Git', 'Firebase', 'Google Cloud', 'Netlify / Vercel / Heroku'] },
+  { category: 'Databases', items: ['PostgreSQL', 'SQLite', 'MySQL'] },
+  { category: 'Libraries & Frameworks', items: ['React', 'Next.js', 'Android SDK', 'Flutter', 'Unity'] },
+  { category: 'Tools & Platforms', items: ['VS Code', 'IntelliJ', 'Android Studio', 'Figma', 'GitHub'] },
 ];
 
 export const history = [

@@ -5,7 +5,6 @@ import { Footer } from '@/components/Footer';
 import { HomePage } from '@/pages/HomePage';
 import { AboutPage } from '@/pages/AboutPage';
 import { WritingPage } from '@/pages/WritingPage';
-import { ResumePage } from '@/pages/ResumePage';
 import { ContactPage } from '@/pages/ContactPage';
 
 function App() {
@@ -20,8 +19,6 @@ function App() {
         return <AboutPage onNavigate={navigate} />;
       case 'writing':
         return <WritingPage />;
-      case 'resume':
-        return <ResumePage onNavigate={navigate} />;
       case 'contact':
         return <ContactPage />;
       default:

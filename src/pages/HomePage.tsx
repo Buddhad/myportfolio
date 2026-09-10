@@ -33,12 +33,6 @@ export function HomePage({ onNavigate }: Props) {
             About Me
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </button>
-          <button
-            onClick={() => onNavigate('resume')}
-            className="link-underline text-sm font-medium text-ink-600 hover:text-ink-900 dark:text-ink-300 dark:hover:text-ink-50"
-          >
-            View Resume
-          </button>
         </div>
       </section>
 
@@ -52,7 +46,7 @@ export function HomePage({ onNavigate }: Props) {
             onClick={() => onNavigate('writing')}
             className="link-underline text-sm text-ink-500 hover:text-ink-800 dark:text-ink-400 dark:hover:text-ink-100"
           >
-            View all
+            View Projects
           </button>
         </div>
         <div className="mt-6 divide-y divide-ink-200/60 dark:divide-ink-800/60">

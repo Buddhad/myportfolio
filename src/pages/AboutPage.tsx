@@ -15,9 +15,11 @@ export function AboutPage({ onNavigate }: Props) {
         <div className="mt-6 max-w-prose space-y-4 text-lg leading-relaxed text-ink-600 dark:text-ink-300">
           <p>{profile.bio}</p>
           <p>
-            In my spare time, I mentor early-stage founders, contribute to open-source
-            projects, and write about developer tooling and AI infrastructure. If you think
-            I can be helpful to you or your team, feel free to get in touch.
+            Alongside game development, I’m also interested in web development, backend systems, databases, and deployment technologies. I enjoy learning how different technologies work together—from building a website and connecting it to a database to designing scalable applications and services.
+
+            I’m a self-driven developer who likes experimenting, solving technical problems, and continuously learning new tools and technologies. My goal is to create projects that are not only technically interesting but also enjoyable and meaningful for the people who use or play them.
+
+            Currently, I’m focused on building games, experimenting with new technologies, and turning my ideas into real-world projects.
           </p>
         </div>
         <button

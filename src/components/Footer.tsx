@@ -38,7 +38,7 @@ export function Footer({ onNavigate }: Props) {
         </div>
       </div>
       <div className="container-wide mt-6 text-center text-xs text-ink-400 dark:text-ink-600 sm:text-left">
-        &copy; {new Date().getFullYear()} {profile.name}. Built with care.
+        &copy; {new Date().getFullYear()} {profile.name}.
       </div>
     </footer>
   );
