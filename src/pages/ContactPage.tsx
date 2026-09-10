@@ -9,16 +9,52 @@ export function ContactPage() {
   const [message, setMessage] = useState('');
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [botcheck, setBotcheck] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // If the honeypot is filled, silently reject (act like it succeeded to fool the bot)
+    if (botcheck) {
+      setSent(true);
+      return;
+    }
+    
     if (!name || !email || !message) return;
-    setSent(true);
-    setTimeout(() => {
-      setSent(false);
-      setName('');
-      setEmail('');
-      setMessage('');
-    }, 3000);
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "1ee9df39-d4e4-404b-9bf2-018faaf49cba",
+          name,
+          email,
+          message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSent(true);
+        setTimeout(() => {
+          setSent(false);
+          setName('');
+          setEmail('');
+          setMessage('');
+        }, 3000);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -72,6 +108,16 @@ export function ContactPage() {
 
         {/* Contact form */}
         <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Honeypot field to catch spam bots */}
+          <input 
+            type="checkbox" 
+            name="botcheck" 
+            className="hidden" 
+            style={{ display: 'none' }}
+            checked={botcheck}
+            onChange={(e) => setBotcheck(e.target.checked)}
+          />
+
           <div>
             <label className="mb-1.5 block text-sm font-medium text-ink-600 dark:text-ink-300">
               Name
@@ -110,10 +156,12 @@ export function ContactPage() {
           </div>
           <button
             type="submit"
-            disabled={sent}
+            disabled={sent || isSubmitting}
             className="group inline-flex items-center gap-2 rounded-full bg-ink-900 px-5 py-2.5 text-sm font-medium text-ink-50 transition-all hover:bg-ink-700 disabled:opacity-50 dark:bg-ink-50 dark:text-ink-900 dark:hover:bg-ink-200"
           >
-            {sent ? (
+            {isSubmitting ? (
+              'Sending...'
+            ) : sent ? (
               'Message sent'
             ) : (
               <>
