@@ -11,16 +11,31 @@ export function ContactPage() {
 
   const [botcheck, setBotcheck] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError('');
+
     // If the honeypot is filled, silently reject (act like it succeeded to fool the bot)
     if (botcheck) {
       setSent(true);
       return;
     }
-    
+
     if (!name || !email || !message) return;
+
+    // Check if the user has submitted a message in the last hour
+    const lastSubmission = localStorage.getItem('lastFormSubmission');
+    if (lastSubmission) {
+      const timeSinceLastSubmission = Date.now() - parseInt(lastSubmission, 10);
+      const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
+
+      if (timeSinceLastSubmission < oneHour) {
+        setSubmitError("You've already sent a message recently. Please try again later.");
+        return;
+      }
+    }
 
     setIsSubmitting(true);
 
@@ -33,6 +48,7 @@ export function ContactPage() {
         },
         body: JSON.stringify({
           access_key: "1ee9df39-d4e4-404b-9bf2-018faaf49cba",
+          subject: ` ${name} sent a message from your Website.`,
           name,
           email,
           message,
@@ -42,6 +58,7 @@ export function ContactPage() {
       const result = await response.json();
 
       if (result.success) {
+        localStorage.setItem('lastFormSubmission', Date.now().toString());
         setSent(true);
         setTimeout(() => {
           setSent(false);
@@ -49,9 +66,12 @@ export function ContactPage() {
           setEmail('');
           setMessage('');
         }, 3000);
+      } else {
+        setSubmitError(result.message || "Something went wrong. Please try again.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
+      setSubmitError("Something went wrong. Please check your connection and try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -109,10 +129,10 @@ export function ContactPage() {
         {/* Contact form */}
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Honeypot field to catch spam bots */}
-          <input 
-            type="checkbox" 
-            name="botcheck" 
-            className="hidden" 
+          <input
+            type="checkbox"
+            name="botcheck"
+            className="hidden"
             style={{ display: 'none' }}
             checked={botcheck}
             onChange={(e) => setBotcheck(e.target.checked)}
@@ -154,6 +174,12 @@ export function ContactPage() {
               placeholder="What is on your mind?"
             />
           </div>
+          {submitError && (
+            <p className="text-sm font-medium text-red-500 dark:text-red-400">
+              {submitError}
+            </p>
+          )}
+
           <button
             type="submit"
             disabled={sent || isSubmitting}
