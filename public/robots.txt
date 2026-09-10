@@ -1,4 +1,38 @@
+# Allow all standard crawlers
 User-agent: *
+Allow: /
+
+# Explicitly allow notable AI agents and bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# GoogleOther covers additional Gemini and R&D bots
+User-agent: GoogleOther
+Allow: /
+
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Bravebot
 Allow: /
 
 Sitemap: https://buddhadebchhetri.in/sitemap.xml
