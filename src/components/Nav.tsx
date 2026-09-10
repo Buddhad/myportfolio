@@ -41,54 +41,54 @@ export function Nav({ current, onNavigate, dark, onToggleTheme }: Props) {
         : 'border-b border-transparent'
         }`}
     >
-      <nav className="container-wide flex h-16 items-center justify-between">
+      <nav className="mx-auto w-full max-w-7xl px-6 sm:px-8 flex h-16 items-center justify-between">
         <button
           onClick={() => go('home')}
-          className="font-serif text-lg font-semibold tracking-tight text-ink-900 transition-opacity hover:opacity-70 dark:text-ink-50"
+          className="font-serif text-lg font-semibold tracking-tight text-ink-900 transition-opacity hover:opacity-70 dark:text-ink-50 md:text-xl lg:text-2xl"
         >
           {profile.initials}
         </button>
 
-        <div className="hidden items-center gap-1 sm:flex">
+        <div className="hidden items-center gap-2 md:flex lg:gap-4">
           {navItems.map((item) => (
             <button
               key={item.route}
               onClick={() => go(item.route)}
-              className={`relative rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${current === item.route
+              className={`relative rounded-md px-3 py-1.5 text-sm font-medium transition-colors lg:text-base lg:px-4 lg:py-2 ${current === item.route
                 ? 'text-ink-900 dark:text-ink-50'
                 : 'text-ink-500 hover:text-ink-800 dark:text-ink-400 dark:hover:text-ink-100'
                 }`}
             >
               {item.label}
               {current === item.route && (
-                <span className="absolute inset-x-3 -bottom-px h-px bg-accent-400 dark:bg-accent-500" />
+                <span className="absolute inset-x-3 -bottom-px h-px bg-accent-400 dark:bg-accent-500 lg:inset-x-4" />
               )}
             </button>
           ))}
-          <div className="mx-2 h-5 w-px bg-ink-200 dark:bg-ink-800" />
+          <div className="mx-2 h-5 w-px bg-ink-200 dark:bg-ink-800 lg:mx-4" />
           <ThemeToggle dark={dark} onToggleTheme={onToggleTheme} />
         </div>
 
-        <div className="flex items-center gap-2 sm:hidden">
+        <div className="flex items-center gap-3 md:hidden">
           <ThemeToggle dark={dark} onToggleTheme={onToggleTheme} />
           <button
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
-            className="flex h-9 w-9 items-center justify-center rounded-full text-ink-600 hover:bg-ink-100 dark:text-ink-300 dark:hover:bg-ink-800"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-ink-600 hover:bg-ink-100 dark:text-ink-300 dark:hover:bg-ink-800"
           >
-            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </nav>
 
       {menuOpen && (
-        <div className="border-b border-ink-200 bg-ink-50/95 backdrop-blur-md dark:border-ink-800 dark:bg-ink-950/95 sm:hidden">
-          <div className="container-wide flex flex-col py-4">
+        <div className="border-b border-ink-200 bg-ink-50/95 backdrop-blur-md dark:border-ink-800 dark:bg-ink-950/95 md:hidden">
+          <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 flex flex-col py-4">
             {navItems.map((item) => (
               <button
                 key={item.route}
                 onClick={() => go(item.route)}
-                className={`py-3 text-left text-base font-medium transition-colors ${current === item.route
+                className={`py-3 text-left text-base font-medium transition-colors sm:text-lg sm:py-4 ${current === item.route
                   ? 'text-ink-900 dark:text-ink-50'
                   : 'text-ink-500 hover:text-ink-800 dark:text-ink-400 dark:hover:text-ink-100'
                   }`}
