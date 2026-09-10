@@ -46,7 +46,7 @@ export function BlogPage() {
       {/* Selected writing elsewhere */}
       <section className="mt-16">
         <h2 className="font-serif text-lg font-medium text-ink-700 dark:text-ink-200">
-          Selected Blogs
+          Other Blogs
         </h2>
         <div className="mt-6 divide-y divide-ink-200/60 dark:divide-ink-800/60">
           {selectedWriting.map((post) => (

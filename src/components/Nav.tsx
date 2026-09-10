@@ -54,15 +54,17 @@ export function Nav({ current, onNavigate, dark, onToggleTheme }: Props) {
             <button
               key={item.route}
               onClick={() => go(item.route)}
-              className={`relative rounded-md px-3 py-1.5 text-sm font-medium transition-colors lg:text-base lg:px-4 lg:py-2 ${current === item.route
+              className={`group relative rounded-md px-3 py-1.5 text-sm font-medium transition-colors lg:text-base lg:px-4 lg:py-2 ${current === item.route
                 ? 'text-ink-900 dark:text-ink-50'
                 : 'text-ink-500 hover:text-ink-800 dark:text-ink-400 dark:hover:text-ink-100'
                 }`}
             >
               {item.label}
-              {current === item.route && (
-                <span className="absolute inset-x-3 -bottom-px h-px bg-accent-400 dark:bg-accent-500 lg:inset-x-4" />
-              )}
+              <span
+                className={`absolute inset-x-3 -bottom-px h-[2px] bg-orange-500 lg:inset-x-4 transition-transform duration-300 ease-out origin-left ${
+                  current === item.route ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`}
+              />
             </button>
           ))}
           <div className="mx-2 h-5 w-px bg-ink-200 dark:bg-ink-800 lg:mx-4" />

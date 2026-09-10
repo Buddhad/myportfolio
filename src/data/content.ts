@@ -112,28 +112,22 @@ export const essays = [
 
 export const selectedWriting = [
   {
-    date: '2026-05-01',
-    source: 'InfoQ',
-    title: 'The state of AI-assisted code review in 2026',
-    url: '#',
+    date: '2024-03-12',
+    source: 'Dev.to',
+    title: '6 Must-Have APIs for Web Development ',
+    url: 'https://dev.to/buddhadebchhetri/6-must-have-apis-for-web-development-3233',
   },
   {
-    date: '2026-01-20',
-    source: 'Northwind Blog',
-    title: 'Announcing Northwind Build v3: 10x faster cold starts',
-    url: '#',
+    date: '2022-09-03',
+    source: 'Dev.to',
+    title: '10 Useful Android Library for Every New Developer ',
+    url: 'https://dev.to/buddhadebchhetri/10-useful-android-library-for-every-new-developer-4e5n',
   },
   {
-    date: '2025-09-10',
-    source: 'ACM Queue',
-    title: 'Content-addressed storage for build systems',
-    url: '#',
-  },
-  {
-    date: '2025-04-03',
-    source: 'Northwind Blog',
-    title: 'We open-sourced our test runner. Here is what we learned.',
-    url: '#',
+    date: '2022-03-20',
+    source: 'Dev.to',
+    title: 'Best Free 3D Assets for Gamedevs',
+    url: 'https://dev.to/buddhadebchhetri/best-free-3d-assets-for-gamedevs-4d51',
   },
 ];
 
@@ -220,24 +214,31 @@ export const history = [
 
 export const projects = [
   {
-    title: 'Neon Odyssey',
-    description: 'A fast-paced 3D platformer set in a cyberpunk universe. Built with Unity, featuring custom shaders and fluid movement mechanics.',
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80',
-    link: '#',
-    tags: ['Unity', 'C#', '3D Platformer', 'HLSL']
+    title: 'Bulletbound ',
+    description: 'A 2D action-adventure platformer. Playable directly in the web browser.',
+    image: 'https://img.itch.zone/aW1nLzE3ODc5Njg3LnBuZw==/315x250%23c/nrqHde.png',
+    link: 'https://buddhadebchhetri.itch.io/bulletbound',
+    tags: ['Action', 'Adventure', '2D Platformer', 'Web']
   },
   {
-    title: 'Echoes of the Past',
-    description: 'An atmospheric 2D puzzle adventure game with rich narrative storytelling and hand-drawn environments.',
-    image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80',
-    link: '#',
-    tags: ['Unreal Engine', 'Blueprints', '2D', 'Puzzle']
+    title: 'Summer Adventure ',
+    description: 'A classic platformer game themed around a summer journey.',
+    image: 'https://img.itch.zone/aW1nLzkxODE4OTIucG5n/315x250%23c/FSi3nE.png',
+    link: 'https://buddhadebchhetri.itch.io/summer-adventure',
+    tags: ['Adventure', 'Platformer', '2D']
   },
   {
-    title: 'Multiplayer Arena',
-    description: 'A competitive top-down shooter prototyping networking models, predictive movement, and server-authoritative logic.',
-    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80',
-    link: '#',
-    tags: ['Unity', 'C#', 'Networking', 'Mirror']
+    title: 'OneWay ',
+    description: 'An endless adventure game designed around continuous movement and progression.',
+    image: 'https://img.itch.zone/aW1nLzg3NDMxNzIucG5n/315x250%23c/gMnHqW.png',
+    link: 'https://buddhadebchhetri.itch.io/oneway',
+    tags: ['Adventure', 'Endless Game', '2D']
+  },
+  {
+    title: 'The Virtual Guy ',
+    description: 'A 2D platformer and adventure game. Made in Unity and playable directly in the web browser.',
+    image: 'https://img.itch.zone/aW1nLzc0NjE4OTYucG5n/315x250%23c/Vsbt8F.png',
+    link: 'https://buddhadebchhetri.itch.io/the-virtual-guy',
+    tags: ['Unity', '2D Platformer', 'Adventure', 'Web']
   }
 ];
