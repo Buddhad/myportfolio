@@ -1,5 +1,5 @@
 import type { Route } from '@/lib/router';
-import { profile, history } from '@/data/content';
+import { profile, history, education, skills } from '@/data/content';
 
 interface Props {
   onNavigate: (r: Route) => void;
@@ -48,6 +48,66 @@ export function AboutPage({ onNavigate }: Props) {
               <p className="max-w-prose text-base leading-relaxed text-ink-600 dark:text-ink-300">
                 {item.text}
               </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Education */}
+      <section className="mt-20">
+        <h2 className="font-serif text-xl font-medium text-ink-800 dark:text-ink-100">
+          Education
+        </h2>
+        <div className="mt-8 space-y-8">
+          {education.map((item, i) => (
+            <div key={i} className="flex flex-col gap-1">
+              <h3 className="text-lg font-medium text-ink-900 dark:text-ink-50">
+                {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    {item.school}
+                  </a>
+                ) : (
+                  item.school
+                )}
+              </h3>
+              <div className="flex flex-wrap items-center gap-2 text-sm text-ink-500 dark:text-ink-400">
+                <span className="font-medium text-ink-700 dark:text-ink-300">{item.degree}</span>
+                {item.year && (
+                  <>
+                    <span>&middot;</span>
+                    <span>{item.year}</span>
+                  </>
+                )}
+              </div>
+              {item.description && (
+                <p className="mt-3 max-w-prose text-base leading-relaxed text-ink-600 dark:text-ink-300">
+                  {item.description}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section className="mt-20 mb-20">
+        <h2 className="font-serif text-xl font-medium text-ink-800 dark:text-ink-100">
+          Skills
+        </h2>
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          {skills.map((category) => (
+            <div key={category.category}>
+              <h3 className="font-medium text-ink-900 dark:text-ink-50">{category.category}</h3>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {category.items.map((skill) => (
+                  <li
+                    key={skill}
+                    className="rounded-md border border-ink-200 bg-ink-100/50 px-3 py-1 text-sm text-ink-600 dark:border-ink-800 dark:bg-ink-900/50 dark:text-ink-300"
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

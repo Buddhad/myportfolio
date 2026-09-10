@@ -176,16 +176,18 @@ export const experience = [
 
 export const education = [
   {
-    degree: 'M.S. Computer Science',
-    school: 'Stanford University',
-    year: '2015',
-    url: 'https://stanford.edu',
+    degree: 'Diploma in Computer Science and Technology',
+    school: 'Kingston Educational Institute',
+    year: '2019 – 2022',
+    url: 'https://in.linkedin.com/in/buddhadebchhetri',
+    description: 'Passed with First Division honors. Heavily focused on core programming principles and software engineering paradigms. Built practical competencies in C, Java, and Data Structures. Frequently took part in the institution\'s annual college hackathons and competitive coding challenges. Attended external development bootcamps and intensive technical workshops dealing with Web Development and Cloud Computing infrastructure.',
   },
   {
-    degree: 'B.S. Computer Science',
-    school: 'University of Washington',
-    year: '2013',
-    url: 'https://uw.edu',
+    degree: 'Secondary School Certification',
+    school: 'Secondary Education (WBBSE)',
+    year: '',
+    url: '',
+    description: 'Developed a robust initial baseline in advanced Mathematics and pure Sciences. Enthusiastically represented his school in science exhibition modeling circuits and participated in inter-school sports tournaments.',
   },
 ];
 
