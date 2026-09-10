@@ -14,9 +14,12 @@ function formatDate(iso: string) {
   });
 }
 
+import { SEO } from '@/components/SEO';
+
 export function HomePage({ onNavigate }: Props) {
   return (
     <div className="container-wide pt-32 pb-12">
+      <SEO canonical="/" />
       {/* Hero */}
       <section className="stagger">
         <h1 className="font-serif text-4xl font-semibold leading-tight tracking-tight text-ink-900 dark:text-ink-50 sm:text-5xl">

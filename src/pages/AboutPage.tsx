@@ -5,9 +5,12 @@ interface Props {
   onNavigate: (r: Route) => void;
 }
 
+import { SEO } from '@/components/SEO';
+
 export function AboutPage({ onNavigate }: Props) {
   return (
     <div className="container-wide pt-32 pb-12">
+      <SEO title="About — Buddhadeb Chhetri" canonical="/about" />
       <section className="animate-fade-up">
         <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink-900 dark:text-ink-50 sm:text-4xl">
           About

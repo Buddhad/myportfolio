@@ -1,4 +1,5 @@
 import { essays, selectedWriting } from '@/data/content';
+import { SEO } from '@/components/SEO';
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-US', {
@@ -11,6 +12,7 @@ function formatDate(iso: string) {
 export function BlogPage() {
   return (
     <div className="container-wide pt-32 pb-12">
+      <SEO title="Blogs — Buddhadeb Chhetri" canonical="/blogs" />
       <section className="animate-fade-up">
         <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink-900 dark:text-ink-50 sm:text-4xl">
           Blogs

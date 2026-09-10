@@ -1,5 +1,6 @@
 import { useRoute, type Route } from '@/lib/router';
 import { useTheme } from '@/lib/theme';
+import { HelmetProvider } from 'react-helmet-async';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { HomePage } from '@/pages/HomePage';
@@ -30,13 +31,15 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-ink-50 dark:bg-ink-950">
-      <Nav current={route} onNavigate={navigate} dark={dark} onToggleTheme={toggle} />
-      <main key={route} className="animate-fade-in">
-        {renderPage()}
-      </main>
-      <Footer onNavigate={navigate} />
-    </div>
+    <HelmetProvider>
+      <div className="min-h-screen bg-ink-50 dark:bg-ink-950">
+        <Nav current={route} onNavigate={navigate} dark={dark} onToggleTheme={toggle} />
+        <main key={route} className="animate-fade-in">
+          {renderPage()}
+        </main>
+        <Footer onNavigate={navigate} />
+      </div>
+    </HelmetProvider>
   );
 }
 

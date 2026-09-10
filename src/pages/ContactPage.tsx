@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { profile } from '@/data/content';
 import { Mail, MapPin, Send } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 export function ContactPage() {
   const [name, setName] = useState('');
@@ -22,7 +23,8 @@ export function ContactPage() {
 
   return (
     <div className="container-wide pt-32 pb-12">
-      <section className="animate-fade-up">
+      <SEO title="Contact — Buddhadeb Chhetri" canonical="/contact" />
+      <section className="animate-fade-up max-w-2xl">
         <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink-900 dark:text-ink-50 sm:text-4xl">
           Contact
         </h1>

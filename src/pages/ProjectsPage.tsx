@@ -1,8 +1,10 @@
 import { projects } from '@/data/content';
+import { SEO } from '@/components/SEO';
 
 export function ProjectsPage() {
   return (
     <div className="container-wide pt-32 pb-12">
+      <SEO title="Projects — Buddhadeb Chhetri" canonical="/projects" />
       <section className="animate-fade-up">
         <h1 className="font-serif text-3xl font-semibold tracking-tight text-ink-900 dark:text-ink-50 sm:text-4xl">
           Projects
