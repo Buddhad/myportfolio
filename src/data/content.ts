@@ -4,7 +4,7 @@ export const profile = {
   role: 'Founder',
   company: 'Surya Interactive',
   companyUrl: 'https://suryainteractive.in/',
-  tagline: 'A Game Developer, Web Developer, and Gamer. Always Building.',
+  tagline: 'A Game Developer, Web Developer and Gamer. Always Building.',
   bio: `Hi, I’m Buddhadeb Chhetri, an independent game developer and web developer passionate about building interactive experiences, digital products, and playing as a gamer.
 
 I work primarily with Unity and Unreal Engine, developing both 2D and 3D games with a focus on gameplay, systems, storytelling, and immersive experiences. I enjoy taking an idea from the early concept stage and turning it into a playable, polished product as a Chhetri developer.`,
